@@ -1,3 +1,4 @@
+alert("JS Connected");
 /* POPUP ELEMENTS */
 
 const popup =
