@@ -1,3 +1,5 @@
+/* ELEMENTS */
+
 const popup =
 document.getElementById("popup");
 
@@ -7,9 +9,12 @@ document.querySelectorAll(".join-btn");
 const closePopup =
 document.getElementById("close-popup");
 
+const registrationForm =
+document.getElementById("registration-form");
+
 /* OPEN POPUP */
 
-joinButtons.forEach(button => {
+joinButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
 
@@ -25,7 +30,7 @@ closePopup.addEventListener("click", () => {
     popup.style.display = "none";
 });
 
-/* CLOSE ON OUTSIDE CLICK */
+/* CLICK OUTSIDE */
 
 window.addEventListener("click", (e) => {
 
@@ -34,44 +39,17 @@ window.addEventListener("click", (e) => {
         popup.style.display = "none";
     }
 });
-/* REGISTRATION FORM */
 
-const registrationForm =
-document.getElementById("registration-form");
+/* FORM SUBMIT */
 
 registrationForm.addEventListener("submit",
 function(e){
 
     e.preventDefault();
 
-    const name =
-    document.getElementById("reg-name").value;
-
-    const email =
-    document.getElementById("reg-email").value;
-
-    const phone =
-    document.getElementById("reg-phone").value;
-
-    const plan =
-    document.getElementById("reg-plan").value;
-
-    /* SUCCESS MESSAGE */
-
-    alert(
-
-        "Registration Successful!\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Plan: " + plan
-    );
-
-    /* RESET FORM */
+    alert("Registration Successful!");
 
     registrationForm.reset();
-
-    /* CLOSE POPUP */
 
     popup.style.display = "none";
 });
